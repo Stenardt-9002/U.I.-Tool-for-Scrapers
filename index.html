@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>UI Script Generator (V1)</title>
+
+	<link rel="stylesheet" href="style.css">
+	<script src="CodeMirror/lib/codemirror.js"></script>
+	<link rel="stylesheet" href="CodeMirror/lib/codemirror.css">
+	<link rel="stylesheet" href="CodeMirror/theme/shadowfox.css">
+	<script src="CodeMirror/mode/python/python.js"></script>
+	<!-- <script src="require.js"></script> -->
+
+	<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"> -->
+
+<!-- <script src="{{url_for('static', filename='jquery.js') }}"></script> -->
+<!-- <script src="static/jquery.js"></script> -->
+<script src="jquery.js"></script>
+
+
+<!-- <script src="{{url_for('static', filename='utils.js') }}"></script> -->
+<!-- <script src="static/utils.js"></script> -->
+<script src="utils.js"></script>
+
+
+<!-- <script src="{{url_for('static', filename='graph.js') }}"></script> -->
+<!-- <script src="static/graph.js"></script> -->
+<script src="graph.js"></script>
+
+
+
+<!-- <script src="{{url_for('static', filename='ElGrapho.min.js') }}"></script> -->
+<!-- <script src="static/ElGrapho.min.js"></script> -->
+<script src="ElGrapho.min.js"></script>
+
+
+
+<!-- <link rel="stylesheet" href="static/css/main.css"> -->
+<!-- <link rel="stylesheet" href="static/css/textstyle.css"> -->
+
+
+
+
+</head>
+
+
+
+
+
+
+
+
+
+
+
+<body>
+	<div id="main">
+
+		<div id="left">
+			<div id="url-input-container">
+				<input id="url-input" type="text" placeholder="Enter URL" spellcheck="false" />
+				<span id="status">Please Enter a Valid URL</span>
+			</div>
+
+			<div id="navigation">
+
+				<div id="spcial-radio">
+					<div class="navs"> <strong>Select One Graph</strong> </div>
+					<ul style="list-style: none; padding: 0; margin:10px auto; width: 94%;">
+						<!-- <li class="navs" data-name="elements"><span>Web Elements</span><span style="float: right;">--</span></li>
+						<li class="navs" data-name="tables"><span>Tables</span><span style="float: right;">--</span></li>
+						<li class="navs" data-name="links"><span>Links</span><span style="float: right;">--</span></li>
+						<li class="navs" data-name="images"><span>Images</span><span style="float: right;">--</span></li> -->
+						<!-- <li class="navs" data-name="others"><span>Other Files</span><span style="float: right;">--</span></li> -->
+
+
+
+						<!-- <li class="navs" data-name="elements"><span>Web Elements</span><span style="float: right;">--</span></li>
+						<li class="navs" data-name="tables"><span>Tables</span><span style="float: right;">--</span></li>
+						<li class="navs" data-name="links"><span>Links</span><span style="float: right;">--</span></li>
+						<li class="navs" data-name="images"><span>Images</span><span style="float: right;">--</span></li> -->
+
+
+						<li class="navs" >
+							<div class="input-radio"><input type="radio" id="rd1" name="grp1" onclick="rd1_cf();" value="" checked>
+							<label class="option" for="rd1">Force Directed Graph</label></div></li>					
+
+						<li class="navs" >
+							<div class="input-radio"><input type="radio" id="rd2" name="grp1" onclick="rd2_cf();" value="">
+							<label class="option" for="rd2">Random Tree</label></div></li>
+						<li class="navs" >
+							<div class="input-radio"><input type="radio" name="grp1" id="rd3" onclick="rd3_cf();" value="">
+							<label class="option" for="rd3">Radial Tree</label></div></li>
+						<li class="navs" >
+							<div class="input-radio"><input type="radio" name="grp1" id="rd4" onclick="rd4_cf();" value="">
+							<label class="option" for="rd4">Cluster</label></div></li>
+
+
+					</ul>
+				</div>
+
+				
+
+			</div>
+
+		</div>
+
+		<!-- <div id="display-area" class="large-containers"> -->
+		<div id="container-1" class="large-containers">
+
+		</div>
+
+		<div id="generation-area" class="large-containers">
+			<!-- <span id="filename">website-scraper.py</span> -->
+			<span id="filename">Base_Template.py</span>
+			<label class="switch">
+				<!-- <div>Allow Code Adding</div> -->
+				<input type="checkbox" id="toggle_button_code_p" , checked>
+				<span class="slider round"></span>
+			  </label>
+
+
+		</div>
+
+		<div id="loader-container">
+			<div id="loader"></div>
+			<span>Loading Content, Please Wait(Check Request File) ...</span>
+		</div>
+
+	</div>
+	<script src="script.js"></script>
+	<!-- <script src="renderer.js"></script> -->
+</body>
+
+</html>
